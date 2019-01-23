@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+}
+
+#sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: calc(100% - 50px);
+    overflow: scroll;
+}
+
+#sortable li {
+    width: 90%;
+    margin: 0 3px 3px 3px;
+    padding: 2px;
+    padding-left: 30px;
+    font-size: 16px;
+
+}
+
+#sortable li span.handle {
+    margin-left: -1.3em;
+}
+
+#sortable li {
+    background: #eeeeee;
+}
+
+#sortable li.selected {
+    background: cornflowerblue;
+    color: white;
+}
+
+#containment-wrapper {
+    height: calc(100% - 50px);
+    overflow: scroll;
+}

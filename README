@@ -1,0 +1,35 @@
+----- Data generation -----
+
+Firstly, I had to get the documents into a format that could be read by d3. I choose the TSV format due to the text having commas in already.
+
+I wrote a small bash script to concatenate the data and make a single TSV file.
+
+To repeat this, in the Datasets folder, run the bash script and output this to a documents
+
+     $ generate_tsv_from_documents.sh > documents.tsv
+
+this creates the documents.tsv file. This will be read on line 36 of the workspace.js file.
+
+
+----- How the workspace was built -----
+
+The workspace starts by reading the file. Using the readFile method. This method uses a built in d3 function ro read TSV.
+
+Once the data is loaded the document browser is created. I used JQuery to create the elements dynamically and used the built in Sortable
+API from JQuery which can be found here: https://jqueryui.com/sortable/
+
+The when a file is opened this is shown in the workspace. I used Bootstrap to help style the documents. Bootstrap is a popular CSS framework.
+The documents are made draggable using JQuery's draggable API which can be found here: https://jqueryui.com/draggable/
+
+
+----- Starting the server ------
+
+1. Install NodeJS and npm
+
+2. in the project directory run:
+
+     $ npm i
+     $ npm start
+
+This will start a web server avalible in the browser at http://localhost:8080
+
